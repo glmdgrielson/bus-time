@@ -74,6 +74,25 @@ impl BusTime {
 			_ => unreachable!("Invalid hour"),
 		}
 	}
+
+	/// Get the number of hours into the current shift.
+	fn hours_into_shift(&self) -> u32 {
+		self.hour % 6
+	}
+}
+
+impl fmt::Display for BusTime {
+	fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+		let shift = match self.shift() {
+			Shift::ZetaShift => "ZS",
+			Shift::DawnGuard => "DG",
+			Shift::AlphaFlight => "AF",
+			Shift::NightWatch => "NW",
+		};
+		let hours = self.hours_into_shift();
+
+		write!(f, "{} + {}:{}:{}", shift, hours, self.minute, self.second)
+	}
 }
 
 #[cfg(test)]
