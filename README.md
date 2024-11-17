@@ -6,7 +6,8 @@ humanity: the shifts of the Desert Bus for Hope charity livestream.
 ## What is Bus Time?
 
 Bus Time is divided into four sets of six hours, dubbed "shifts". Times are
-universal, but dependent on the Pacific Standard Time of Canada.
+universal in as far as being the same all over the world, but dependent on the
+Pacific Standard Time of Canada.
 
 * Zeta Shift starts at 0:00 (12 AM).
 * Dawn Guard starts at 6:00 (6 AM).
